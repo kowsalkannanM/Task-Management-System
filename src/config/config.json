@@ -1,0 +1,10 @@
+{
+    "development": {
+      "username": "root",
+      "password": "taskdb",
+      "database": "task_management_system",
+      "host": "localhost",
+      "dialect": "mysql"
+    }
+  }
+  

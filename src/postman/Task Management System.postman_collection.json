@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "7c5182c4-1e36-4419-8dc4-1d2cd257070a",
+		"name": "Task Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25588361",
+		"_collection_link": "https://speeding-shadow-980270.postman.co/workspace/New-Team-Workspace~b8e8eb38-5c68-43c4-ba68-ca7af6483b56/collection/25588361-7c5182c4-1e36-4419-8dc4-1d2cd257070a?action=share&source=collection_link&creator=25588361"
+	},
+	"item": [
+		{
+			"name": "get all tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"completed Task\",\r\n    \"description\" : \"Issue in the common list\",\r\n    \"status\" : \"Pending\",\r\n    \"priority\" : \"Low\",\r\n    \"due_date\" : \"2024-08-16T08:27:13.407Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/create-task"
+			},
+			"response": []
+		},
+		{
+			"name": "update task",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\" : \"Completed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/task/1"
+			},
+			"response": []
+		},
+		{
+			"name": "delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/task/1"
+			},
+			"response": []
+		},
+		{
+			"name": "get task by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/task/1"
+			},
+			"response": []
+		},
+		{
+			"name": "task history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/task-history/1"
+			},
+			"response": []
+		}
+	]
+}
